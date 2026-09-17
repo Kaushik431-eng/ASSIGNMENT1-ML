@@ -2,11 +2,11 @@
 
 
 # a) Vector as a row vector.
+
 import numpy as np
 
 row_vector = np.array([20, 50, 1, 10])
 print("Row Vector:\n", row_vector)
-
 col_vector = np.array([[10], [20], [30], [40]])
 print("\nColumn Vector:\n", col_vector)
 
