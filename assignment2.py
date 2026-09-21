@@ -2,7 +2,6 @@
 
 
 # a) Vector as a row vector.
-
 import numpy as np
 
 row_vector = np.array([20, 50, 1, 10])
