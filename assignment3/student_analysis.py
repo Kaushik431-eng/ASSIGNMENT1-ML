@@ -40,3 +40,49 @@ print("unique value:", df["Catogory"].nunique)
 
 # question 6
 print(df[["Rollno", "Name", "Science"]])
+
+
+# question 7
+
+# Display the total number of missing values in each column.
+
+print(df.isnull().sum())
+
+# Fill the missing marks with the mean of the respective subject using inplace=True.
+
+
+# df["English"].fillna(df["English"].mean())
+# df["Maths"].fillna(df["Maths"].mean())
+# df["Science"].fillna(df["Science"].mean())
+
+
+# print(df.isnull().sum())
+
+df.fillna(
+    {
+        "English": df["English"].mean(),
+        "Maths": df["Maths"].mean(),
+        "Science": df["Science"].mean(),
+    },
+    inplace=True,
+)
+
+print(df)
+print(df[["English", "Maths", "Science"]].isnull().sum())
+
+# Handle any remaining missing values in other columns appropriately.
+
+print(df.isnull().sum())
+# Display the total number of missing values in each column again to verify that the missing values have been handled.
+
+print(df.isnull().sum())
+
+# question 8
+
+print(df[df["Gender"] == "female"])
+
+# question 9
+
+print(df[df["Catogory"].isin(["a", "c"])])
+
+# question 10
