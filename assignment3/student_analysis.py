@@ -134,3 +134,31 @@ print(df["Catogory"].value_counts().reindex(["a", "b", "c"]))
 
 
 # question 20
+print(df["scholarship"].value_counts())
+
+# question 21
+df["Total"] = df[["English", "Maths", "Science"]].sum(axis=1)
+top_3 = df.sort_values(by="Total", ascending=False).head(3)
+
+print(top_3)
+
+# question 22
+
+df["scholarship"] = df["scholarship"].replace({"yes": 1, "no": 0})
+
+print(df)
+
+# question 23
+result = df[((df["Gender"] == "female") & (df["Maths"] > 50)) | (df["Science"] > 90)]
+
+print(result)
+
+# question 24
+import os
+
+df.to_csv("student_mark_updated.csv", index=False)
+
+if os.path.exists("student_mark_updated.csv"):
+    print("CSV file created successfully.")
+else:
+    print("CSV file was not created.")
