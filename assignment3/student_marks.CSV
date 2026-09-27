@@ -1,7 +1,7 @@
 Rollno,Name,Gender,English,Maths,Science,Catogory,scholarship
 
-1,kaushik,male,70,90,80,a,yes
-2,zain,male,83,72,,b,yes
+1,kaushik,male,70,90,100,a,yes
+2,zain,male,83,72,,b,no
 3,yachana,female,74,60,87,c,yes
 4,sidhdhi,female,89,70,71,c,yes
 5,prince,male,52,50,50,a,yes

@@ -86,3 +86,51 @@ print(df[df["Gender"] == "female"])
 print(df[df["Catogory"].isin(["a", "c"])])
 
 # question 10
+print(df[(df["Gender"] == "female") & (df["Maths"] > 50)])
+
+
+# question 11
+
+
+df = df.sort_values(
+    by="English",
+    ascending=True,
+)
+print(df)
+
+# question 12
+
+print(df["Gender"].value_counts())
+
+# question 13
+print(df[["Name", "Maths", "Science", "English"]])
+
+# question 14
+
+print(df[["Maths", "Science", "English"]].mean())
+
+# question 15
+
+df["Total"] = df[["English", "Maths", "Science"]].sum(axis=1)
+print(df)
+
+# question 16
+df.sort_values(by="Total", ascending=False, inplace=True)
+print(df)
+
+# question 17
+
+print(df.loc[df["Total"].idxmax(), "Name"])
+
+# question 18
+
+print(df.loc[df["English"].idxmax(), "Name"])
+print(df.loc[df["Science"].idxmax(), "Name"])
+print(df.loc[df["Maths"].idxmax(), "Name"])
+
+
+# question 19
+print(df["Catogory"].value_counts().reindex(["a", "b", "c"]))
+
+
+# question 20
